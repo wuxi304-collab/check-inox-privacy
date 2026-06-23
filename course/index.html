@@ -1,55 +1,147 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="钢铁私塾不锈钢新人学习系统">
-<title>不锈钢新人学习系统｜钢铁私塾</title>
-<link rel="stylesheet" href="v3.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="钢铁私塾不锈钢新人学习系统：以五本权威资料为证据底座的岗位能力训练平台。">
+  <meta name="theme-color" content="#f4efe6">
+  <meta property="og:title" content="不锈钢新人学习系统｜钢铁私塾">
+  <meta property="og:description" content="把复杂标准，学成工作能力。">
+  <title>不锈钢新人学习系统｜钢铁私塾</title>
+  <link rel="stylesheet" href="academy-base.css?v=4.0">
+  <link rel="stylesheet" href="academy-pages.css?v=4.0">
+  <link rel="stylesheet" href="academy-studio.css?v=4.0">
 </head>
 <body>
-<header class="topbar">
-  <a class="brand" href="#" data-view="home" aria-label="返回首页">
-    <span class="seal">钢铁<br>私塾</span>
-    <span><b>不锈钢新人学习系统</b><small>INOX ACADEMY · 2026</small></span>
-  </a>
-  <nav class="main-nav" aria-label="主导航">
-    <button class="nav-tab active" data-view="home">学习首页</button>
-    <button class="nav-tab" data-view="curriculum">课程地图</button>
-    <button class="nav-tab" data-view="sources">资料依据</button>
-    <button class="nav-tab" data-view="pricing">收费方案</button>
-  </nav>
-  <button class="outline-btn" id="openDiagnostic">能力诊断</button>
-</header>
-<main class="app-shell">
-  <section class="view active" id="view-home">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <span class="eyebrow">EVIDENCE-BASED LEARNING</span>
-        <h1>把复杂标准，<br>学成<em>工作能力。</em></h1>
-        <p>面向不锈钢业务、采购、质检与加工新人。每一讲都以真实任务开始，以可验证输出结束。</p>
-        <div class="hero-actions"><button class="primary-btn" id="heroDiagnostic">开始能力诊断</button><button class="ghost-btn" data-open-lesson="1">体验金标第一讲</button></div>
-        <div class="hero-proof"><span><b>30</b>个岗位任务</span><span><b>5</b>本资料底座</span><span><b>3</b>级证据标签</span></div>
-      </div>
-      <div class="hero-art" aria-label="不锈钢学习视觉装置">
-        <div class="art-caption"><span>今日主题</span><b>定义与边界</b></div>
-        <div class="metal-orbit"><div class="metal-disc"><span>Cr</span><b>10.5%</b><small>定义门槛</small></div><i class="orbit orbit-a"></i><i class="orbit orbit-b"></i><i class="orbit orbit-c"></i><span class="node node-a">标准</span><span class="node node-b">组织</span><span class="node node-c">应用</span></div>
-        <div class="art-note">不是背一个数字，而是知道这个数字能说明什么、不能说明什么。</div>
-      </div>
+  <a class="skip-link" href="#mainContent">跳到主要内容</a>
+  <header class="topbar">
+    <button class="brand" type="button" data-view="home" aria-label="返回学习首页">
+      <span class="seal">钢铁<br>私塾</span>
+      <span><b>不锈钢新人学习系统</b><small>INOX ACADEMY · 2026</small></span>
+    </button>
+    <nav class="main-nav" aria-label="主导航">
+      <button class="nav-tab active" type="button" data-view="home">学习首页</button>
+      <button class="nav-tab" type="button" data-view="curriculum">课程地图</button>
+      <button class="nav-tab" type="button" data-view="sources">证据书库</button>
+      <button class="nav-tab" type="button" data-view="pricing">收费方案</button>
+    </nav>
+    <div class="top-actions">
+      <button class="quiet-btn record-btn" type="button" id="openRecord"><span class="record-dot"></span>学习记录</button>
+      <button class="outline-btn" type="button" id="openDiagnostic">能力诊断</button>
+      <button class="mobile-menu-btn" type="button" id="mobileMenu" aria-label="打开菜单" aria-expanded="false">菜单</button>
     </div>
-    <div class="dashboard-grid">
-      <article class="feature-card continue-card"><div class="card-label">CONTINUE LEARNING</div><div class="continue-body"><div class="lesson-index">01</div><div><h2>不锈钢到底是什么</h2><p>从“带磁是不是假货”进入定义、分类与证据边界。</p></div></div><div class="micro-flow"><span>情境</span><i></i><span>实验</span><i></i><span>判断</span><i></i><span>输出</span></div><button class="text-btn" data-open-lesson="1">进入课程 <span>→</span></button></article>
-      <article class="feature-card path-card"><div class="card-label">YOUR ROLE</div><h3>选择你的岗位路径</h3><div class="role-pills" id="rolePills"><button class="selected" data-role="业务员">业务员</button><button data-role="采购">采购</button><button data-role="质检">质检</button><button data-role="加工中心">加工中心</button></div><p id="roleSummary">优先训练询价澄清、标准定位与报价风险识别。</p></article>
-      <article class="feature-card ability-card"><div class="card-label">CAPABILITY</div><div class="ability-head"><h3>岗位能力</h3><b id="abilityTotal">0</b></div><div id="abilityMini"></div><button class="text-btn" id="cardDiagnostic">完成诊断后生成路径 <span>→</span></button></article>
-    </div>
-  </section>
-  <section class="view" id="view-curriculum"><div class="view-head"><div><span class="eyebrow">CURRICULUM</span><h1>30讲，不做30段视频。</h1><p>统一采用“情境—证据—决策—输出”的任务式结构。</p></div><div class="segmented" id="moduleTabs"><button class="active" data-filter="全部">全部</button><button data-filter="基础">基础</button><button data-filter="牌号">牌号</button><button data-filter="标准">标准</button><button data-filter="实战">实战</button></div></div><div class="course-stage"><aside class="module-intro" id="moduleIntro"></aside><div class="course-list" id="courseList"></div></div></section>
-  <section class="view" id="view-sources"><div class="view-head compact"><div><span class="eyebrow">SOURCE LIBRARY</span><h1>五本资料，各司其职。</h1><p>标准负责规定，手册负责解释，历史资料负责说明技术从何而来。</p></div></div><div class="source-gallery" id="sourceGallery"></div><div class="source-principle"><div><span class="e-dot direct"></span><b>直接依据</b><small>标准条款或资料明确陈述</small></div><div><span class="e-dot synthesis"></span><b>跨资料归纳</b><small>由多个来源共同支持</small></div><div><span class="e-dot boundary"></span><b>资料未覆盖</b><small>明确停下，不用常识补写</small></div></div></section>
-  <section class="view" id="view-pricing"><div class="view-head compact"><div><span class="eyebrow">MEMBERSHIP</span><h1>收费的是训练系统，<br>不是五份资料。</h1><p>知识可以查到，判断力必须练出来。</p></div></div><div class="pricing-grid"><article class="price-card"><span>个人基础版</span><h2>新人30讲</h2><div class="price">¥399<small>/ 年</small></div><ul><li>30讲互动课程</li><li>任务与结业作品</li><li>证据索引</li></ul><button class="ghost-btn" data-buy="个人基础版|399">选择基础版</button></article><article class="price-card featured"><div class="recommend-badge">推荐</div><span>AI学习版</span><h2>证据型AI导师</h2><div class="price">¥899<small>/ 年</small></div><ul><li>包含基础版全部内容</li><li>个性化岗位路径</li><li>情境陪练与表达反馈</li></ul><button class="primary-btn" data-buy="AI学习版|899">选择AI版</button></article><article class="price-card"><span>企业版</span><h2>岗位训练平台</h2><div class="price">¥19,800<small>/ 年起</small></div><ul><li>30—50个企业账号</li><li>能力报告与统一考试</li><li>企业案例配置</li></ul><button class="ghost-btn" data-buy="企业版|19800起">咨询企业版</button></article></div></section>
-</main>
-<div class="studio" id="diagnosticStudio" aria-hidden="true"><header class="studio-head"><div class="studio-brand"><span class="mini-seal">诊</span><div><b>岗位能力诊断</b><small id="diagTime">约 6 分钟</small></div></div><div class="studio-progress"><i id="diagProgress"></i></div><button class="icon-btn" data-close="diagnosticStudio">关闭</button></header><div class="studio-body" id="diagnosticBody"></div></div>
-<div class="studio" id="lessonStudio" aria-hidden="true"><header class="studio-head"><div class="studio-brand"><span class="mini-seal">课</span><div><b id="lessonTitle">课程</b><small id="lessonMeta">金标互动课</small></div></div><div class="studio-progress"><i id="lessonProgress"></i></div><button class="icon-btn" data-close="lessonStudio">关闭</button></header><div class="studio-body lesson-body" id="lessonBody"></div></div>
-<div class="purchase-sheet" id="purchaseSheet" aria-hidden="true"><div class="sheet-panel"><button class="sheet-close" data-close="purchaseSheet">×</button><span class="eyebrow">PURCHASE</span><h2 id="purchaseTitle"></h2><p>首发阶段人工确认开通。复制信息后通过邮件或微信提交即可。</p><pre id="purchaseText"></pre><div class="sheet-actions"><button class="primary-btn" id="copyPurchase">复制购买信息</button><a class="ghost-btn" id="purchaseMail">邮件咨询</a></div></div></div>
-<script src="v3.js"></script>
+  </header>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <button type="button" data-view="home">学习首页</button>
+    <button type="button" data-view="curriculum">课程地图</button>
+    <button type="button" data-view="sources">证据书库</button>
+    <button type="button" data-view="pricing">收费方案</button>
+    <button type="button" id="mobileDiagnostic">能力诊断</button>
+  </div>
+
+  <main class="app-shell" id="mainContent">
+    <section class="view active" id="view-home" aria-labelledby="homeTitle">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="edition-line"><span></span>2026 AI原生岗位学习系统</div>
+          <h1 id="homeTitle">把复杂标准，<br>学成<em>工作能力。</em></h1>
+          <p>面向不锈钢业务、采购、质检与加工新人。每一讲从真实问题进入，经由交互、证据和判断，最后形成能带回岗位的输出。</p>
+          <div class="hero-actions">
+            <button class="primary-btn" type="button" id="heroDiagnostic">开始能力诊断</button>
+            <button class="ghost-btn" type="button" data-open-lesson="1">体验金标第一讲</button>
+          </div>
+          <div class="hero-proof" aria-label="课程特征">
+            <span><b>30</b><small>岗位任务</small></span>
+            <span><b>5</b><small>资料底座</small></span>
+            <span><b>3</b><small>证据等级</small></span>
+            <span><b>4</b><small>岗位路径</small></span>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="不锈钢知识视觉装置">
+          <div class="art-grid"></div>
+          <div class="art-caption"><span>TODAY'S CONCEPT</span><b>定义与边界</b></div>
+          <div class="metal-orbit">
+            <div class="metal-disc"><span>Cr</span><b>10.5%</b><small>定义门槛</small></div>
+            <i class="orbit orbit-a"></i><i class="orbit orbit-b"></i><i class="orbit orbit-c"></i>
+            <span class="node node-a">标准</span><span class="node node-b">组织</span><span class="node node-c">应用</span>
+          </div>
+          <div class="art-note"><b>01</b><span>不是背一个数字，而是知道它能说明什么、不能说明什么。</span></div>
+        </div>
+      </div>
+      <div class="dashboard-head"><span>你的学习工作台</span><small id="dashboardDate"></small></div>
+      <div class="dashboard-grid">
+        <article class="feature-card continue-card">
+          <div class="card-top"><span class="card-label">CONTINUE LEARNING</span><span class="status-pill" id="resumeStatus">未开始</span></div>
+          <div class="continue-body"><div class="lesson-index" id="resumeIndex">01</div><div><h2 id="resumeTitle">不锈钢到底是什么</h2><p id="resumeDesc">从“带磁是不是假货”进入定义、分类与证据边界。</p></div></div>
+          <div class="micro-flow"><span>情境</span><i></i><span>交互</span><i></i><span>证据</span><i></i><span>输出</span></div>
+          <button class="text-btn" type="button" id="resumeButton">进入课程 <span>→</span></button>
+        </article>
+        <article class="feature-card path-card">
+          <div class="card-top"><span class="card-label">YOUR ROLE</span><button class="mini-link" type="button" data-view="curriculum">查看路径</button></div>
+          <h3>选择你的岗位</h3>
+          <div class="role-pills" id="rolePills">
+            <button type="button" class="selected" data-role="业务员">业务员</button><button type="button" data-role="采购">采购</button><button type="button" data-role="质检">质检</button><button type="button" data-role="加工中心">加工中心</button>
+          </div>
+          <p id="roleSummary"></p><div class="path-focus" id="pathFocus"></div>
+        </article>
+        <article class="feature-card ability-card">
+          <div class="card-top"><span class="card-label">CAPABILITY</span><span class="status-pill subtle" id="abilityLevel">待诊断</span></div>
+          <div class="ability-head"><div><h3>岗位能力</h3><p>不是观看进度，而是可验证能力。</p></div><b id="abilityTotal">0</b></div>
+          <div id="abilityMini"></div><button class="text-btn" type="button" id="cardDiagnostic">生成个性化路径 <span>→</span></button>
+        </article>
+      </div>
+      <div class="outcome-strip"><div><span>学完后，你应当能够</span><h2>从一句模糊询价，走到一张可执行技术确认单。</h2></div><div class="outcome-list"><span>识别牌号</span><span>定位标准</span><span>读取数据</span><span>发现缺项</span><span>说明边界</span></div></div>
+    </section>
+
+    <section class="view" id="view-curriculum" aria-labelledby="curriculumTitle">
+      <div class="view-head">
+        <div><span class="eyebrow">CURRICULUM</span><h1 id="curriculumTitle">30讲，不做30段视频。</h1><p>统一采用“情境—交互—证据—决策—输出”的任务式结构。</p></div>
+        <div class="curriculum-tools"><label class="search-box"><span>搜索</span><input id="courseSearch" type="search" placeholder="牌号、标准、能力…"></label><div class="segmented" id="moduleTabs"><button class="active" type="button" data-filter="全部">全部</button><button type="button" data-filter="基础">基础</button><button type="button" data-filter="牌号">牌号</button><button type="button" data-filter="标准">标准</button><button type="button" data-filter="实战">实战</button></div></div>
+      </div>
+      <div class="path-banner" id="roleBanner"></div>
+      <div class="course-stage"><aside class="module-intro" id="moduleIntro"></aside><div><div class="course-results"><span id="courseCount"></span><button class="mini-link" type="button" id="toggleRecommended">只看岗位推荐</button></div><div class="course-list" id="courseList"></div><div class="empty-state hidden" id="courseEmpty">没有找到匹配课程。换一个关键词试试。</div></div></div>
+    </section>
+
+    <section class="view" id="view-sources" aria-labelledby="sourcesTitle">
+      <div class="view-head compact"><div><span class="eyebrow">SOURCE LIBRARY</span><h1 id="sourcesTitle">五本资料，各司其职。</h1><p>标准负责规定，手册负责解释，历史资料负责说明技术从何而来。</p></div></div>
+      <div class="source-gallery" id="sourceGallery"></div>
+      <div class="evidence-method"><div class="method-copy"><span class="eyebrow">EVIDENCE METHOD</span><h2>每个结论，都必须先回答三个问题。</h2></div><div class="method-steps"><article><b>01</b><h3>它从哪里来？</h3><p>标出标准、条款、表格或教材章节。</p></article><article><b>02</b><h3>它是什么性质？</h3><p>区分直接规定、资料解释和跨资料归纳。</p></article><article><b>03</b><h3>它能用到哪里？</h3><p>说明产品形式、用途、环境与版本边界。</p></article></div></div>
+      <div class="source-principle"><div><span class="e-dot direct"></span><b>直接依据</b><small>标准条款或资料明确陈述</small></div><div><span class="e-dot synthesis"></span><b>跨资料归纳</b><small>由多个来源共同支持</small></div><div><span class="e-dot boundary"></span><b>资料未覆盖</b><small>明确停下，不用常识补写</small></div></div>
+    </section>
+
+    <section class="view" id="view-pricing" aria-labelledby="pricingTitle">
+      <div class="view-head compact"><div><span class="eyebrow">MEMBERSHIP</span><h1 id="pricingTitle">收费的是训练系统，<br>不是五份资料。</h1><p>知识可以查到，判断力必须练出来。</p></div></div>
+      <div class="pricing-grid">
+        <article class="price-card"><span>个人基础版</span><h2>新人30讲</h2><div class="price">¥399<small>/ 年</small></div><p>适合希望建立完整基础体系的个人学员。</p><ul><li>30讲互动课程</li><li>任务与结业作品</li><li>证据索引与复习计划</li></ul><button class="ghost-btn" type="button" data-buy="个人基础版|399">选择基础版</button></article>
+        <article class="price-card featured"><div class="recommend-badge">推荐</div><span>AI学习版</span><h2>证据型AI导师</h2><div class="price">¥899<small>/ 年</small></div><p>适合需要个性化路径、表达反馈和岗位陪练的学员。</p><ul><li>包含基础版全部内容</li><li>个性化岗位路径</li><li>情境陪练与表达反馈</li><li>错题诊断与间隔复习</li></ul><button class="primary-btn light" type="button" data-buy="AI学习版|899">选择AI版</button></article>
+        <article class="price-card"><span>企业版</span><h2>岗位训练平台</h2><div class="price">¥19,800<small>/ 年起</small></div><p>适合统一新人培养标准、追踪能力和减少低级错误。</p><ul><li>30—50个企业账号</li><li>能力报告与统一考试</li><li>企业案例配置</li><li>一次集中培训</li></ul><button class="ghost-btn" type="button" data-buy="企业版|19800起">咨询企业版</button></article>
+      </div>
+      <div class="compare-wrap"><h2>三个版本，差别在哪里？</h2><div class="compare-table"><div class="compare-row head"><span>功能</span><b>基础版</b><b>AI版</b><b>企业版</b></div><div class="compare-row"><span>30讲互动课程</span><b>✓</b><b>✓</b><b>✓</b></div><div class="compare-row"><span>证据型AI导师</span><b>—</b><b>✓</b><b>✓</b></div><div class="compare-row"><span>人工作业点评</span><b>—</b><b>可选</b><b>含</b></div><div class="compare-row"><span>组织学习报告</span><b>—</b><b>—</b><b>✓</b></div></div></div>
+      <div class="faq"><h2>购买前常见问题</h2><details><summary>课程会提供五本资料全文吗？</summary><p>不会。课程只提供必要引用、原创图解和出处索引，不重新分发标准或书籍全文。</p></details><details><summary>学习完成后是否等同于职业资格认证？</summary><p>不是。系统提供学习记录和结业证明，不宣称国家职业资格或法定资质。</p></details><details><summary>资料版本更新后怎么办？</summary><p>课程会标记所依据版本；涉及标准更新的内容，需要重新复核并更新证据卡。</p></details></div>
+    </section>
+  </main>
+
+  <div class="studio" id="diagnosticStudio" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="diagTitle">
+    <header class="studio-head"><div class="studio-brand"><span class="mini-seal">诊</span><div><b id="diagTitle">岗位能力诊断</b><small id="diagTime">约 6 分钟</small></div></div><div class="studio-progress" aria-label="诊断进度"><i id="diagProgress"></i></div><button class="icon-btn" type="button" data-close="diagnosticStudio">关闭</button></header>
+    <div class="studio-body" id="diagnosticBody"></div>
+  </div>
+  <div class="studio" id="lessonStudio" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lessonTitle">
+    <header class="studio-head"><div class="studio-brand"><span class="mini-seal">课</span><div><b id="lessonTitle">课程</b><small id="lessonMeta">金标互动课</small></div></div><div class="studio-progress" aria-label="课程进度"><i id="lessonProgress"></i></div><div class="studio-tools"><button class="icon-btn" type="button" id="openNotes">笔记</button><button class="icon-btn" type="button" data-close="lessonStudio">关闭</button></div></header>
+    <div class="studio-body lesson-body" id="lessonBody"></div>
+  </div>
+  <aside class="notes-drawer" id="notesDrawer" aria-hidden="true"><header><div><span class="eyebrow">MY NOTES</span><h2>我的学习笔记</h2></div><button class="icon-btn" type="button" id="closeNotes">关闭</button></header><p>笔记只保存在当前浏览器，不上传服务器。</p><textarea id="lessonNotes" placeholder="记录你的判断、疑问或工作案例…"></textarea><div class="notes-foot"><small id="notesSaved">自动保存</small><button class="ghost-btn" type="button" id="clearNotes">清空</button></div></aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="detail-drawer" id="sourceDrawer" aria-hidden="true"><header><div><span class="eyebrow" id="sourceType"></span><h2 id="sourceTitle"></h2></div><button class="icon-btn" type="button" id="closeSource">关闭</button></header><div id="sourceDetail"></div></aside>
+  <aside class="detail-drawer record-drawer" id="recordDrawer" aria-hidden="true"><header><div><span class="eyebrow">LEARNING RECORD</span><h2>学习记录</h2></div><button class="icon-btn" type="button" id="closeRecord">关闭</button></header><div id="recordContent"></div></aside>
+  <div class="purchase-sheet" id="purchaseSheet" aria-hidden="true" role="dialog" aria-modal="true"><div class="sheet-panel"><button class="sheet-close" type="button" data-close="purchaseSheet">×</button><span class="eyebrow">PURCHASE</span><h2 id="purchaseTitle"></h2><p>首发阶段人工确认开通。复制信息后通过邮件或微信提交即可。</p><pre id="purchaseText"></pre><div class="sheet-actions"><button class="primary-btn" type="button" id="copyPurchase">复制购买信息</button><a class="ghost-btn" id="purchaseMail">邮件咨询</a></div></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="course-data.js?v=4.0"></script>
+  <script src="academy-core.js?v=4.0"></script>
+  <script src="academy-diagnostic.js?v=4.0"></script>
+  <script src="academy-lessons.js?v=4.0"></script>
+  <script src="lesson-01.js?v=4.0"></script>
+  <script src="lesson-02.js?v=4.0"></script>
+  <script src="lesson-03.js?v=4.0"></script>
+  <script src="bootstrap.js?v=4.0"></script>
 </body>
 </html>
